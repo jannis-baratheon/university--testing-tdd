@@ -42,7 +42,7 @@ class CarTest {
         sut.turnKey(Direction.CLOCKWISE);
 
         // then
-        verify(infotainmentMock, times(1)).turnRadio();
+        verify(infotainmentMock, times(1)).turnRadioOn();
     }
 
     @Test
