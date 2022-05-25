@@ -23,7 +23,7 @@ class CarTest {
     }
 
     @Test
-    void turningKeyOnceSetsIgnitionToStateI() {
+    void turningKeyClockwiseOnceSetsIgnitionToAccessoryState() {
         // given
 
         // when
@@ -34,7 +34,7 @@ class CarTest {
     }
 
     @Test
-    void turningKeyOnceTurnsOnRadio() {
+    void turningKeyClockwiseOnceTurnsRadioOn() {
         // given
 
         // when
@@ -45,7 +45,7 @@ class CarTest {
     }
 
     @Test
-    void turningKeyTwiceTurnsCarOn() {
+    void turningKeyClockwiseTwiceTurnsIgnitionOn() {
         // given
         sut.turnKey(Direction.CLOCKWISE);
 
@@ -57,8 +57,9 @@ class CarTest {
     }
 
     @Test
-    void turningKeyMoreThanOnceDoesNotWork() {
+    void keyCannotBeTurnedClockwiseMoreThanThreeTimes() {
         // given
+        sut.turnKey(Direction.CLOCKWISE);
         sut.turnKey(Direction.CLOCKWISE);
         sut.turnKey(Direction.CLOCKWISE);
 
