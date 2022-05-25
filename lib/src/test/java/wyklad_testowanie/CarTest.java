@@ -14,7 +14,6 @@ class CarTest {
 
     @BeforeAll
     static void setupGlobal() {
-
     }
 
     @BeforeEach
@@ -31,7 +30,7 @@ class CarTest {
         sut.turnKey(Direction.CLOCKWISE);
 
         // then
-        assertThat(sut.getIgnitionState()).isEqualTo(IgnitionState.STATE_I);
+        assertThat(sut.getIgnitionState()).isEqualTo(IgnitionState.ACCESSORY);
     }
 
     @Test
@@ -54,7 +53,7 @@ class CarTest {
         sut.turnKey(Direction.CLOCKWISE);
 
         // then
-        assertThat(sut.getIgnitionState()).isEqualTo(IgnitionState.STATE_II);
+        assertThat(sut.getIgnitionState()).isEqualTo(IgnitionState.IGNITION);
     }
 
     @Test
